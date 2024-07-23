@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import Layout from './components/Layout'
 import Aboutpage from './pages/Aboutpage'
+import PsychometricTestPage from './pages/PsychometricTestPage'
+import ContactForm from './pages/ContactFormPage'
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
     <Routes>
       <Route index path='/' element={<Homepage/>}/>
       <Route path='/about' element={<Aboutpage/>}/>
+      <Route path='/psychometrictest' element={<PsychometricTestPage/>}/>
+      <Route path='/contactform' element={<ContactForm/>}/>
     </Routes>
     </Layout>
    </Router>
