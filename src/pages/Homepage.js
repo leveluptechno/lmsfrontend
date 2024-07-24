@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import courseImage1 from "../assets/images/logo.png";
-import courseImage2 from "../assets/images/logo.png";
-import courseImage3 from "../assets/images/logo.png";
-import testimonialImage1 from "../assets/images/logo.png";
-import testimonialImage2 from "../assets/images/logo.png";
-import testimonialImage3 from "../assets/images/logo.png";
-import testimonialImage4 from "../assets/images/logo.png";
+import courseImage1 from "../assets/images/adobe illustrator.jpg";
+import courseImage2 from "../assets/images/blender.jpg";
+import courseImage3 from "../assets/images/photoshop.jpg";
+import testimonialImage1 from "../assets/images/testimonial.png";
+import testimonialImage2 from "../assets/images/customer-review.png";
+import testimonialImage3 from "../assets/images/customer-satisfaction.png";
+import testimonialImage4 from "../assets/images/rating.png";
+import predictiveImages from "../assets/images/predictive-chart.png"
+import psychometrictest from "../assets/images/critical-thinking.png"
 
 const Homepage = () => {
   return (
@@ -14,7 +16,7 @@ const Homepage = () => {
       <div className="w-full">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-400 to-blue-500 text-white py-20 px-10 text-center">
-          <h1 className="text-5xl font-extrabold mb-4">Welcome to MBBSWALA</h1>
+          <h1 className="text-5xl font-extrabold mb-4">Welcome to Learning HubSpot</h1>
           <p className="text-2xl mb-8">Your gateway to learning and growth</p>
           <Link
             to="/courses"
@@ -38,7 +40,7 @@ const Homepage = () => {
                 <img
                   src={course}
                   alt={`Course ${index + 1}`}
-                  className="w-[50%] h-[50%] object-cover"
+                  className="w-[40%] h-[70%] p-7 object-cover"
                 />
                 <div className="p-6 text-center">
                   <h3 className="text-2xl font-bold mb-2">
@@ -77,7 +79,7 @@ const Homepage = () => {
             Test & Assessment
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[courseImage1, courseImage3].map((course, index) => (
+            {[ psychometrictest, predictiveImages].map((course, index) => (
               <div
                 key={index}
                 className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 flex flex-col justify-center items-center"
@@ -85,7 +87,7 @@ const Homepage = () => {
                 <img
                   src={course}
                   alt={`Assessment ${index + 1}`}
-                  className="w-[50%] h-[50%] object-cover"
+                  className="w-[40%] h-[80%] p-10 object-cover"
                 />
                 <div className="p-6 text-center">
                   <h3 className="text-2xl font-bold mb-2">
@@ -158,7 +160,7 @@ const Homepage = () => {
                 <img
                   src={testimonial.image}
                   alt={`Testimonial ${index + 1}`}
-                  className="w-[50%] h-[50%] rounded-full mx-auto mb-4"
+                  className="w-[50%] h-[60%] border-[5px] border-gradient-to-r from-blue-400 to-teal-500 rounded-full object-cover mx-auto mb-4"
                 />
                 <p className="text-gray-700 mb-4">{testimonial.text}</p>
                 <p className="font-bold">{testimonial.name}</p>
