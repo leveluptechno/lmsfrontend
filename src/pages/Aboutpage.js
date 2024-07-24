@@ -1,7 +1,9 @@
 import React from 'react';
-import teamImage from "../assets/images/logo.png";
-import historyImage from "../assets/images/logo.png";
-import chooseUsImage from "../assets/images/logo.png";
+import teamImage1 from "../assets/images/man (1).png";
+import teamImage2 from "../assets/images/woman.png";
+import teamImage3 from "../assets/images/man.png";
+import historyImage from "../assets/images/history.svg";
+import chooseUsImage from "../assets/images/choose.png";
 
 const Aboutpage = () => {
   return (
@@ -76,7 +78,7 @@ const Aboutpage = () => {
         <h2 className='text-3xl font-bold mb-8 text-blue-700 text-center animate-fadeInDown'>Meet Our Team</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           <div className='bg-white shadow-lg p-3 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeIn flex flex-col justify-center items-center'>
-            <img src={teamImage} alt='Team Member' className='w-[50%] h-[50%] object-cover' />
+            <img src={teamImage1} alt='Team Member' className='w-[40%] h-[70%] p-5 object-cover' />
             <div className=' text-center'>
               <h3 className='text-xl font-bold mb-2'>John Doe</h3>
               <p className='text-gray-600 mb-4'>Founder & CEO</p>
@@ -84,7 +86,7 @@ const Aboutpage = () => {
             </div>
           </div>
           <div className='bg-white shadow-lg p-1 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeIn delay-100 flex flex-col justify-center items-center'>
-            <img src={teamImage} alt='Team Member' className='w-[50%] h-[50%] object-cover' />
+            <img src={teamImage2} alt='Team Member' className='w-[40%] h-[70%] p-5 object-cover' />
             <div className=' text-center'>
               <h3 className='text-xl font-bold mb-2'>Jane Smith</h3>
               <p className='text-gray-600 mb-4'>Chief Consultant</p>
@@ -92,7 +94,7 @@ const Aboutpage = () => {
             </div>
           </div>
           <div className='bg-white shadow-lg p-3 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeIn delay-200 flex flex-col justify-center items-center'>
-            <img src={teamImage} alt='Team Member' className='w-[50%] h-[50%] object-cover' />
+            <img src={teamImage3} alt='Team Member' className='w-[40%] h-[70%] p-5 object-cover' />
             <div className=' text-center'>
               <h3 className='text-xl font-bold mb-2'>Robert Brown</h3>
               <p className='text-gray-600 mb-4'>Senior Advisor</p>
