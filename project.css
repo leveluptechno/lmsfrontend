@@ -1,0 +1,49 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.header
+{
+    padding: 5px;
+    background-color: deepskyblue;
+    height: 115px;
+    width: 100%;
+    box-shadow: 4px 0px 10px 0px;
+}
+.cont
+{
+    margin: 20px 0px 0px 20px ;
+}
+
+.LMS
+{
+    position: fixed;
+    height: 80px;
+    width: 100px;
+    margin: -65px 0px 0px 85px;
+    font-size:50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: white;
+}
+.bar
+{
+    margin: -40px 0px 0px -15px;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.comp,.line
+{
+    margin: 0px 25px 0px 15px;
+    text-transform: capitalize;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-weight: 600;
+}
+
