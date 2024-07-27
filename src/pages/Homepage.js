@@ -42,7 +42,7 @@ const Homepage = () => {
                   alt={`Course ${index + 1}`}
                   className="w-[40%] h-[70%] p-7 object-cover"
                 />
-                <div className="p-6 text-center">
+                <div className="p-4 text-center">
                   <h3 className="text-2xl font-bold mb-2">
                     Course {index + 1}
                   </h3>
@@ -62,7 +62,7 @@ const Homepage = () => {
         </section>
 
         {/* Psychometric Assessment Section */}
-        <section className="bg-gradient-to-r from-pink-400 to-red-500 text-white py-20 px-10 mt-12 text-center rounded-xl mx-4">
+        <section className="bg-gradient-to-r from-pink-400 to-red-500 text-white py-20 px-10 mt-12 mb-12 text-center rounded-xl mx-4">
           <h2 className="text-3xl font-bold mb-4">Psychometric Assessment</h2>
           <p className="text-xl mb-8">Sign up and start your free assessment</p>
           <Link
@@ -160,7 +160,7 @@ const Homepage = () => {
                 <img
                   src={testimonial.image}
                   alt={`Testimonial ${index + 1}`}
-                  className="w-[50%] h-[60%] border-[5px] border-gradient-to-r from-blue-400 to-teal-500 rounded-full object-cover mx-auto mb-4"
+                  className="w-[50%] h-[44%] border-[5px] border-gradient-to-r from-blue-400 to-teal-500 rounded-full object-cover mx-auto mb-4"
                 />
                 <p className="text-gray-700 mb-4">{testimonial.text}</p>
                 <p className="font-bold">{testimonial.name}</p>

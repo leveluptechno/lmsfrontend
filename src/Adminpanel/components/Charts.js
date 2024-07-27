@@ -30,7 +30,7 @@ const Charts = () => {
   return (
     <div className="bg-white shadow-md rounded-lg p-4 space-y-4">
       <h3 className="text-xl font-semibold mb-2">Course Statistics</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Pie Chart */}
         <div className="flex flex-col items-center">
           <h4 className="text-lg font-semibold mb-2">Course Distribution</h4>
