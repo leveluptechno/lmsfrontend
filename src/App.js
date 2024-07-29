@@ -21,6 +21,10 @@ import AddStudent from './Adminpanel/students/AddStudents'
 import AllStudents from './Adminpanel/students/AllStudents'
 import AddTrainer from './Adminpanel/trainers/AddTrainers'
 import AllTrainers from './Adminpanel/trainers/AllTrainers'
+import Report from './Adminpanel/Reports/Reports'
+import Content from './Adminpanel/Contents/Contents'
+import Settings from './Adminpanel/settings/Settings'
+import Profile from './Adminpanel/profile/Profile'
 
 const App = () => {
   return (
@@ -50,6 +54,13 @@ const App = () => {
       <Route path='/admin/allstudent' element={<AllStudents/>}/>
       <Route path='/admin/addtrainer' element={<AddTrainer/>}/>
       <Route path='/admin/alltrainers' element={<AllTrainers/>}/>
+      <Route path='/admin/reports' element={<Report/>}/>
+      <Route path='/admin/contents' element={<Content/>}/>
+      <Route path='/admin/settings' element={<Settings/>}/>
+      <Route path='/admin/profile' element={<Profile/>}/>
+      <Route path='/admin/privacy-policy' element={<Profile/>}/>
+      <Route path='/admin/terms-of-service' element={<Profile/>}/>
+      <Route path='/admin/contact' element={<Profile/>}/>
       </Route>
     </Routes>
     

@@ -26,14 +26,14 @@ const Sidebar = () => {
 
   return (
     <div className="h-screen bg-gray-800 text-white w-64 flex flex-col">
-      <div className="flex items-center justify-center h-20 border-b border-gray-700">
+      <Link to="/admin" className="flex items-center justify-center h-20 border-b border-gray-700 cursor-pointer">
         <img src={logo} alt="logo" className="w-20 h-20" />
         <h1 className="text-2xl font-semibold ml-4">LMS</h1>
-      </div>
+      </Link>
       <div className="flex-1 overflow-y-auto">
         <div className="flex flex-col p-4 space-y-4">
           <Link
-            to="/dashboard"
+            to="/admin"
             className="flex items-center p-2 hover:bg-gray-700 rounded"
           >
             <MdDashboard size={24} />
@@ -181,7 +181,7 @@ const Sidebar = () => {
           </div>
 
           <Link
-            to="/reports"
+            to="/admin/reports"
             className="flex items-center p-2 hover:bg-gray-700 rounded"
           >
             <FaChartBar size={24} />
@@ -189,7 +189,7 @@ const Sidebar = () => {
           </Link>
 
           <Link
-            to="/content"
+            to="/admin/contents"
             className="flex items-center p-2 hover:bg-gray-700 rounded"
           >
             <FaFileAlt size={24} />
@@ -197,7 +197,7 @@ const Sidebar = () => {
           </Link>
 
           <Link
-            to="/settings"
+            to="/admin/settings"
             className="flex items-center p-2 hover:bg-gray-700 rounded"
           >
             <IoMdSettings size={24} />
