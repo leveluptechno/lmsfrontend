@@ -1,3 +1,4 @@
+// AllStudents.js
 import React, { useState, useEffect } from "react";
 import { FaEdit, FaTrashAlt, FaEye } from "react-icons/fa";
 
@@ -5,41 +6,28 @@ const AllStudents = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    // Fetch students data from an API or a mock data source
-    // For now, we'll use mock data
-    const mockStudents = [
-      {
-        id: 1,
-        firstName: "John",
-        lastName: "Doe",
-        email: "john.doe@example.com",
-        phone: "123-456-7890",
-        course: "React Basics",
-      },
-      {
-        id: 2,
-        firstName: "Jane",
-        lastName: "Smith",
-        email: "jane.smith@example.com",
-        phone: "098-765-4321",
-        course: "Advanced CSS",
-      },
-      {
-        id: 3,
-        firstName: "Mark",
-        lastName: "Johnson",
-        email: "mark.johnson@example.com",
-        phone: "567-890-1234",
-        course: "JavaScript Fundamentals",
-      },
-      // Add more mock students as needed
-    ];
-    setStudents(mockStudents);
+    // Fetch students data from the API
+    const fetchStudents = async () => {
+      try {
+        const response = await fetch("/api/admin/addstudents");
+        const data = await response.json();
+        setStudents(data);
+      } catch (error) {
+        console.error("Error fetching students:", error);
+      }
+    };
+
+    fetchStudents();
   }, []);
 
-  const handleDelete = (id) => {
-    // Implement delete functionality
-    setStudents(students.filter((student) => student.id !== id));
+  const handleDelete = async (id) => {
+    try {
+      // Implement delete functionality
+      await fetch(`/api/students/${id}`, { method: "DELETE" });
+      setStudents(students.filter((student) => student.id !== id));
+    } catch (error) {
+      console.error("Error deleting student:", error);
+    }
   };
 
   return (
