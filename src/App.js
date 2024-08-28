@@ -25,10 +25,18 @@ import Report from "./Adminpanel/Reports/Reports";
 import Content from "./Adminpanel/Contents/Contents";
 import Settings from "./Adminpanel/settings/Settings";
 import Profile from "./Adminpanel/profile/Profile";
-import Servies1 from "./components/Servies1";
-import CourseDetails1 from "./components/CourseDetails1";
-import CourseDetails2 from "./components/CourseDetails2";
-import CourseDetails3 from "./components/CourseDetails3";
+
+import CourseDetails1 from "./Services/CourseDetails1";
+import CourseDetails2 from "./Services/CourseDetails2";
+import CourseDetails3 from "./Services/CourseDetails3";
+import Course1 from "./components/Course1";
+import CollegePredictorForm from "./components/CollegePredictorForm";
+import Servies1 from "./Services/Servies1";
+import Service2 from "./Services/Service2";
+import TrainingAndDev from "./Services/TrainingAndDev";
+import ApplicationAssistance from "./Services/ApplicationAssistance";
+import CareerCounseling from "./Services/CareerCounseling";
+import CoursesPage from "./CoursesPage/CoursesPage";
 
 const App = () => {
   return (
@@ -48,6 +56,7 @@ const App = () => {
             <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
             <Route path="/resetpassword" element={<ResetPasswordPage />} />
             <Route path="/service1" element={<Servies1></Servies1>}></Route>
+            <Route path="/service2" element={<Service2></Service2>}></Route>
             <Route
               path="/service1/course-details/1"
               element={<CourseDetails1></CourseDetails1>}
@@ -60,7 +69,30 @@ const App = () => {
               path="/service1/course-details/3"
               element={<CourseDetails3></CourseDetails3>}
             ></Route>
+            <Route
+              path="/careercounseling"
+              element={<CareerCounseling></CareerCounseling>}
+            ></Route>
+            <Route
+              path="/applicationassistance"
+              element={<ApplicationAssistance></ApplicationAssistance>}
+            ></Route>
+            <Route
+              path="/traininganddev"
+              element={<TrainingAndDev></TrainingAndDev>}
+            ></Route>
+            <Route
+              path="/courses"
+              element={<CoursesPage></CoursesPage>}
+            ></Route>
+
+            <Route path="/course1" element={<Course1></Course1>}></Route>
+            <Route
+              path="/neetpredictortool"
+              element={<CollegePredictorForm></CollegePredictorForm>}
+            ></Route>
           </Route>
+
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="/admin/adduser" element={<AddUser />} />

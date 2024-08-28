@@ -72,10 +72,18 @@ function Servies1() {
                   </p>
                 </Link> */}
                 <div className="flex">
-                  <Link to={course.link}>
+                  {/* <Link to={course.link}>
                     <button className="bg-gradient-to-r from-blue-500 to-teal-400 text-white py-3 px-6 sm:px-8 md:px-10 lg:px-12 rounded-full font-semibold hover:bg-pink-600 transition duration-300 text-sm sm:text-base md:text-lg lg:text-xl w-full sm:w-auto">
                       Show Details
                     </button>
+                  </Link> */}
+                  <Link
+                    to={course.link}
+                    className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-lg font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-400 to-blue-500 group-hover:from-teal-400 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-teal-200 dark:focus:ring-teal-800 transition-all duration-300"
+                  >
+                    <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                      Show Details
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -83,6 +91,9 @@ function Servies1() {
           ))}
         </div>
       </section>
+      {/* <Link to={"/userDashbord"}>
+        <button>UserDashbord</button>
+      </Link> */}
     </>
   );
 }

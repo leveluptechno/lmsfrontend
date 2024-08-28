@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full bg-gradient-to-r from-blue-500 to-teal-400 h-[130px] shadow-lg flex justify-between items-center p-5 relative z-10">
+      <div className="w-full rounded-lg bg-gradient-to-r from-[#3498db] to-[#2c3e50] h-[130px] shadow-lg flex justify-between items-center p-5 relative z-20 drop-shadow-xl">
         <Link to="/" className="flex justify-center items-center text-white">
           <img
             src={logo}
@@ -45,25 +45,25 @@ const Header = () => {
           </div>
           {/* Dropdown menu */}
           <div
-            className={`bg-white text-black font-serif w-[300px] absolute rounded-bl-lg justify-start p-5 shadow-lg  right-[-20px] top-[77px] z-10 ${
+            className={`bg-white text-[#2c3e50] font-serif w-[300px] absolute rounded-bl-lg justify-start p-5 shadow-lg  right-[-20px] top-[77px] z-10 ${
               threeDotDropdownOpen ? "flex flex-col" : "hidden"
             }`}
           >
-            <Link to="/" className="hover:bg-gray-200 p-2 rounded">
-              Home
+            <Link to="/" className="p-2 rounded hover:bg-[#ecf0f1]">
+              <span>Home</span>
             </Link>
-            <Link to="/about" className="hover:bg-gray-200 p-2 rounded">
+            <Link to="/about" className="hover:bg-[#ecf0f1] p-2 rounded">
               About
             </Link>
             <Link
               onClick={toggleServicesDropdownThreeDot}
-              className="hover:bg-gray-200 p-2 rounded flex items-center "
+              className="p-2 rounded flex items-center hover:bg-[#ecf0f1]"
             >
               Service <IoMdArrowDropdown />
             </Link>
             <Link
               to="/service1"
-              className={` px-4 py-2 hover:bg-gray-200 ${
+              className={`px-4 py-2 hover:bg-[#ecf0f1] ${
                 servicesDropdownOpenThreeDot ? "block" : "hidden"
               } `}
             >
@@ -71,7 +71,7 @@ const Header = () => {
             </Link>
             <Link
               to="/service2"
-              className={` px-4 py-2 hover:bg-gray-200 ${
+              className={`px-4 py-2 hover:bg-[#ecf0f1] ${
                 servicesDropdownOpenThreeDot ? "block" : "hidden"
               }`}
             >
@@ -79,79 +79,104 @@ const Header = () => {
             </Link>
             <Link
               to="/psychometrictest"
-              className="hover:bg-gray-200 p-2 rounded"
+              className="p-2 rounded hover:bg-[#ecf0f1]"
             >
               Psychometric Test
             </Link>
-            <Link to="/contactform" className="hover:bg-gray-200 p-2 rounded">
+            <Link to="/contactform" className="p-2 rounded hover:bg-[#ecf0f1]">
               Contact Us
             </Link>
-            <Link to="/login" className="hover:bg-gray-200 p-2 rounded">
+            <Link to="/login" className="p-2 rounded hover:bg-[#ecf0f1]">
               Login/Signup
             </Link>
           </div>
         </div>
         {/* Main navigation for Desktop */}
-        <div className="hidden  md:flex justify-end lg:justify-around font-serif items-center gap-3 flex-wrap text-white relative text-[25px]">
-          <Link to="/" className="hover:underline">
+        <div className="hidden md:flex justify-end lg:justify-around font-sans text-5xl items-center flex-wrap text-white relative text-[25px]">
+          <Link
+            to="/"
+            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+          >
             Home
           </Link>
-          <Link to="/about" className="hover:underline">
+          <Link
+            to="/about"
+            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+          >
             About
           </Link>
           {/* Services dropdown */}
-          <div className="relative group">
+          <div className="relative group hover:bg-[#34495e] p-4 rounded-lg transition duration-300">
             <div
               onClick={toggleServicesDropdown}
-              className="hover:underline flex justify-center items-center cursor-pointer"
+              className="flex justify-center items-center cursor-pointer"
             >
-              Services
+              <span className="hover:font-semibold">Services</span>
               <IoMdArrowDropdown />
               <div
-                className={`absolute bg-white top-[100px] left-[9.5px]  lg:top-[77px] lg:left-0 text-black rounded shadow-lg mt-2 ${
+                className={`absolute bg-white top-[100px] left-[9.5px] lg:top-[77px] lg:left-0 text-[#2c3e50] rounded shadow-lg mt-2 ${
                   servicesDropdownOpen ? "block" : "hidden"
                 } w-[340px]`}
               >
                 <Link
                   to="/service1"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:bg-[#ecf0f1]"
                 >
                   UG Medical Consultancy
                 </Link>
                 <Link
                   to="/service2"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:bg-[#ecf0f1]"
                 >
                   PG Medical Consultancy
                 </Link>
               </div>
             </div>
           </div>
-          <Link to="/psychometrictest" className="hover:underline">
+          <Link
+            to="/psychometrictest"
+            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+          >
             Psychometric Test
           </Link>
-          <Link to="/contactform" className="hover:underline">
+          <Link
+            to="/contactform"
+            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+          >
             Contact Us
           </Link>
-          <button onClick={toggleSidebar} className="hover:underline">
+          <button
+            onClick={toggleSidebar}
+            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+          >
             Login/Signup
           </button>
         </div>
       </div>
+
       {/* Sidebar for Login/Signup */}
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-20">
           <div className="fixed right-0 top-0 w-64 h-full bg-white shadow-lg p-5">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold">Login/Signup</h2>
-              <button onClick={toggleSidebar} className="text-xl">
+              <h2 className="text-xl font-bold text-[#2c3e50]">Login/Signup</h2>
+              <button
+                onClick={toggleSidebar}
+                className="text-xl text-[#2c3e50]"
+              >
                 &times;
               </button>
             </div>
-            <Link to="/login" className="block px-4 py-2 hover:bg-gray-200">
+            <Link
+              to="/login"
+              className="block px-4 py-2 hover:bg-[#ecf0f1] text-[#2c3e50]"
+            >
               Login
             </Link>
-            <Link to="/signup" className="block px-4 py-2 hover:bg-gray-200">
+            <Link
+              to="/signup"
+              className="block px-4 py-2 hover:bg-[#ecf0f1] text-[#2c3e50]"
+            >
               Signup
             </Link>
           </div>
