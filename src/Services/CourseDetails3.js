@@ -42,7 +42,7 @@ function CourseDetails3() {
         `}
       </style>
       <div className="bg-[#F2F2F2] min-h-screen">
-        <header className="bg-gradient-to-r from-green-500 to-blue-600 text-white py-16 px-6 md:py-24 md:px-10 text-center font-serif">
+        <header className="bg-gradient-to-r from-[#3498db] to-[#2c3e50] text-white py-16 px-6 md:py-24 md:px-10 text-center font-serif">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 font-serif leading-tight">
             Counseling Services
           </h1>

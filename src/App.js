@@ -37,6 +37,9 @@ import TrainingAndDev from "./Services/TrainingAndDev";
 import ApplicationAssistance from "./Services/ApplicationAssistance";
 import CareerCounseling from "./Services/CareerCounseling";
 import CoursesPage from "./CoursesPage/CoursesPage";
+import AdminLoginPage from "./pages/auth/AdminLogin";
+import UserLoginPage from "./pages/user/UserLoginPage";
+import Resource from "./pages/Resource";
 
 const App = () => {
   return (
@@ -87,10 +90,20 @@ const App = () => {
             ></Route>
 
             <Route path="/course1" element={<Course1></Course1>}></Route>
+            <Route path="/resource" element={<Resource></Resource>}></Route>
             <Route
               path="/neetpredictortool"
               element={<CollegePredictorForm></CollegePredictorForm>}
             ></Route>
+            <Route path="adminlogin" element={<AdminLoginPage />} />
+            <Route path="/UserLoginPage" element={<UserLoginPage />} />
+
+            {/* Other routes */}
+            <Route
+              path="/auth/reset-password"
+              element={<ResetPasswordPage></ResetPasswordPage>}
+            />
+            {/* Other routes */}
           </Route>
 
           <Route path="/admin" element={<AdminLayout />}>

@@ -29,14 +29,14 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full rounded-lg bg-gradient-to-r from-[#3498db] to-[#2c3e50] h-[130px] shadow-lg flex justify-between items-center p-5 relative z-20 drop-shadow-xl">
-        <Link to="/" className="flex justify-center items-center text-white">
+      <div className="w-full bg-gradient-to-r from-[#3498db] to-[#2c3e50] flex justify-between items-center relative h-[150px] drop-shadow-lg">
+        <Link to="/" className="flex justify-center items-center text-white ">
           <img
             src={logo}
-            className="w-20 h-20 md:w-28 md:h-28 mr-2"
+            className="w-17 h-17 md:w-28 md:h-28 mr-2"
             alt="logo"
           />
-          <h1 className="text-3xl md:text-5xl font-serif font-bold">LMS</h1>
+          <h1 className="text-3xl md:text-4xl font-serif font-bold">LMS</h1>
         </Link>
         {/* Three-dot Dropdown for Mobile */}
         <div className="flex md:hidden absolute top-[54px] right-5">
@@ -45,25 +45,31 @@ const Header = () => {
           </div>
           {/* Dropdown menu */}
           <div
-            className={`bg-white text-[#2c3e50] font-serif w-[300px] absolute rounded-bl-lg justify-start p-5 shadow-lg  right-[-20px] top-[77px] z-10 ${
+            className={`bg-white text-black font-serif w-[300px] absolute rounded-bl-lg justify-start p-5 shadow-lg  right-[-20px] top-[77px] z-10 ${
               threeDotDropdownOpen ? "flex flex-col" : "hidden"
             }`}
           >
-            <Link to="/" className="p-2 rounded hover:bg-[#ecf0f1]">
-              <span>Home</span>
+            <Link
+              to="/"
+              className="hover:bg-white hover:text-black p-2 rounded mx-3 font-sans font-bold"
+            >
+              Home
             </Link>
-            <Link to="/about" className="hover:bg-[#ecf0f1] p-2 rounded">
+            <Link
+              to="/about"
+              className="hover:bg-white  hover:text-black  p-2 rounded mx-3 font-sans font-bold"
+            >
               About
             </Link>
             <Link
               onClick={toggleServicesDropdownThreeDot}
-              className="p-2 rounded flex items-center hover:bg-[#ecf0f1]"
+              className="hover:bg-gray-200 p-2 rounded flex items-center mx-3 font-sans font-bold"
             >
               Service <IoMdArrowDropdown />
             </Link>
             <Link
               to="/service1"
-              className={`px-4 py-2 hover:bg-[#ecf0f1] ${
+              className={` px-4 py-2 hover:bg-gray-200 ${
                 servicesDropdownOpenThreeDot ? "block" : "hidden"
               } `}
             >
@@ -71,7 +77,7 @@ const Header = () => {
             </Link>
             <Link
               to="/service2"
-              className={`px-4 py-2 hover:bg-[#ecf0f1] ${
+              className={` px-4 py-2 hover:bg-gray-200 ${
                 servicesDropdownOpenThreeDot ? "block" : "hidden"
               }`}
             >
@@ -79,54 +85,60 @@ const Header = () => {
             </Link>
             <Link
               to="/psychometrictest"
-              className="p-2 rounded hover:bg-[#ecf0f1]"
+              className="hover:bg-blue-600  hover:text-black  p-2 rounded mx-3 font-sans font-bold"
             >
               Psychometric Test
             </Link>
-            <Link to="/contactform" className="p-2 rounded hover:bg-[#ecf0f1]">
+            <Link
+              to="/contactform"
+              className="hover:bg-blue-600  hover:text-black  p-2 rounded mx-3 font-sans font-bold"
+            >
               Contact Us
             </Link>
-            <Link to="/login" className="p-2 rounded hover:bg-[#ecf0f1]">
+            <Link
+              to="/login"
+              className="hover:bg-blue-600  hover:text-black  p-2 rounded mx-3 font-sans font-bold"
+            >
               Login/Signup
             </Link>
           </div>
         </div>
         {/* Main navigation for Desktop */}
-        <div className="hidden md:flex justify-end lg:justify-around font-sans text-5xl items-center flex-wrap text-white relative text-[25px]">
+        <div className="hidden md:flex justify-end lg:justify-around font-sans items-center gap-3 flex-wrap text-white relative text-[24px] hover:m-2 hover:p-3 p-3 m-2">
           <Link
             to="/"
-            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+            className="hover:bg-white rounded-xl hover:text-black	transition duration-300 py-2 px-2 font-sans"
           >
-            Home
+            <span className="underline-animation">Home</span>
           </Link>
           <Link
             to="/about"
-            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+            className="hover:bg-white rounded-xl  hover:text-black transition duration-300  py-2 px-2 font-sans"
           >
-            About
+            <span className="underline-animation">About</span>
           </Link>
           {/* Services dropdown */}
-          <div className="relative group hover:bg-[#34495e] p-4 rounded-lg transition duration-300">
+          <div className="relative group">
             <div
               onClick={toggleServicesDropdown}
-              className="flex justify-center items-center cursor-pointer"
+              className="hover:bg-white rounded-xl hover:text-black transition duration-300 py-2 px-2 font-sans flex justify-center items-center cursor-pointer"
             >
-              <span className="hover:font-semibold">Services</span>
+              <span className="underline-animation">Services</span>
               <IoMdArrowDropdown />
               <div
-                className={`absolute bg-white top-[100px] left-[9.5px] lg:top-[77px] lg:left-0 text-[#2c3e50] rounded shadow-lg mt-2 ${
+                className={`absolute bg-white top-[100px] left-[9.5px] lg:top-[77px] lg:left-0 text-black rounded shadow-lg mt-2 ${
                   servicesDropdownOpen ? "block" : "hidden"
-                } w-[340px]`}
+                } w-[340px] `}
               >
                 <Link
                   to="/service1"
-                  className="block px-4 py-2 hover:bg-[#ecf0f1]"
+                  className="block px-4 py-2 hover:bg-gray-200  transition-all font-sans"
                 >
                   UG Medical Consultancy
                 </Link>
                 <Link
                   to="/service2"
-                  className="block px-4 py-2 hover:bg-[#ecf0f1]"
+                  className="block px-4 py-2 hover:bg-gray-200 transition-all font-sans"
                 >
                   PG Medical Consultancy
                 </Link>
@@ -135,50 +147,53 @@ const Header = () => {
           </div>
           <Link
             to="/psychometrictest"
-            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+            className="hover:bg-white rounded-xl  hover:text-black transition duration-300 py-3 px-3 font-sans"
           >
-            Psychometric Test
+            <span className="underline-animation">Psychometric Test</span>
           </Link>
           <Link
             to="/contactform"
-            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+            className="hover:bg-white rounded-xl hover:text-black transition duration-300 py-3 px-3 font-sans"
           >
-            Contact Us
+            <span className="underline-animation">Contact Us</span>
           </Link>
           <button
             onClick={toggleSidebar}
-            className="hover:bg-[#34495e] p-4 rounded-lg hover:font-semibold transition duration-300"
+            className="hover:bg-white rounded-xl hover:text-black transition duration-300 py-3 px-3 font-sans "
           >
-            Login/Signup
+            <span className="underline-animation">Login/Signup</span>
           </button>
         </div>
       </div>
-
       {/* Sidebar for Login/Signup */}
       {isSidebarOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-20">
-          <div className="fixed right-0 top-0 w-64 h-full bg-white shadow-lg p-5">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-20"
+          onClick={toggleSidebar}
+        >
+          <div className="fixed right-0 top-0 w-64 h-full bg-[#F9FAFB] shadow-lg p-5">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold text-[#2c3e50]">Login/Signup</h2>
-              <button
-                onClick={toggleSidebar}
-                className="text-xl text-[#2c3e50]"
-              >
+              <h2 className="text-xl font-bold hover:underline text-[#343A40] text-mono ">
+                Login/Signup
+              </h2>
+              <button onClick={toggleSidebar} className="text-xl">
                 &times;
               </button>
             </div>
-            <Link
-              to="/login"
-              className="block px-4 py-2 hover:bg-[#ecf0f1] text-[#2c3e50]"
-            >
-              Login
-            </Link>
-            <Link
-              to="/signup"
-              className="block px-4 py-2 hover:bg-[#ecf0f1] text-[#2c3e50]"
-            >
-              Signup
-            </Link>
+            <div className="flex flex-col space-y-3">
+              <Link
+                to="/AdminLogin"
+                className="block px-4 py-2 text-white text-semibold bg-gradient-to-r from-[#3498db] to-[#2c3e50] shadow-lg text-[18px] text-mono rounded-lg"
+              >
+                Admin
+              </Link>
+              <Link
+                to="/UserLoginPage"
+                className="block px-4 py-2 text-white text-semibold bg-gradient-to-r from-[#3498db] to-[#2c3e50] shadow-lg text-[18px] text-mono rounded-lg"
+              >
+                User
+              </Link>
+            </div>
           </div>
         </div>
       )}

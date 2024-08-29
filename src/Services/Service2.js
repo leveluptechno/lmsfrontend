@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Service2() {
   return (
     <>
-      <section className="bg-gradient-to-r from-green-400 to-blue-500 text-white py-12 px-6 md:py-20 md:px-10 text-center">
+      <section className="bg-gradient-to-r from-[#3498db] to-[#2c3e50] text-white py-12 px-6 md:py-20 md:px-10 text-center">
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 font-serif">
           PG Medical Consultancy
         </h1>
